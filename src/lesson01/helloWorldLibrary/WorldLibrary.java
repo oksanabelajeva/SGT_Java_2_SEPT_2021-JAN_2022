@@ -4,7 +4,7 @@ public class WorldLibrary {
 
     private String planetName;
 
-    public String getName(){
+    public static String getName(){
         return "Oxana";
     }
 
