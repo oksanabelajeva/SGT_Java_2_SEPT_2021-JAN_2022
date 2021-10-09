@@ -6,12 +6,14 @@ public class ArrayNums {
 
         int[] nums = {12, -45};
         int[] numsTwo = {-43, -67, -100, 43653658};
-        thirdLargest(nums, nums.length);
-        thirdLargest(numsTwo, numsTwo.length);
+        int[] numsThree = {0, -100, -100, 43653658};
+        getLargestNumber(nums, nums.length);
+        getLargestNumber(numsTwo, numsTwo.length);
+        getLargestNumber(numsThree, numsThree.length);
     }
 
-    static void thirdLargest(int array[], int arraySize) {
-        if (arraySize < 3 && arraySize >=1) {
+    public static void getLargestNumber(int[] array, int arraySize) {
+        if (arraySize < 3 && arraySize >= 1) {
             int max = array[0];
             int i;
 
@@ -21,25 +23,17 @@ public class ArrayNums {
             }
             System.out.printf("The Largest element is %d\n", max);
         } else if (arraySize >= 3) {
-
-            int maxFirst = array[0];
-            for (int i = 1; i < arraySize; i++) {
-                if (array[i] > maxFirst)
-                    maxFirst = array[i];
-            }
-
-            int maxSecond = Integer.MIN_VALUE;
+            int max;
             for (int i = 0; i < arraySize; i++) {
-                if (array[i] > maxSecond && array[i] < maxFirst)
-                    maxSecond = array[i];
+                for (int j = i + 1; j < arraySize; j++) {
+                    if (array[i] > array[j]) {
+                        max = array[i];
+                        array[i] = array[j];
+                        array[j] = max;
+                    }
+                }
             }
-
-            int maxThird = Integer.MIN_VALUE;
-            for (int i = 0; i < arraySize; i++) {
-                if (array[i] > maxThird && array[i] < maxSecond)
-                    maxThird = array[i];
-            }
-            System.out.printf("The third Largest element is %d\n", maxThird);
+            System.out.printf("The third largest element is %d\n", array[arraySize - 3]);
         }
     }
 }
