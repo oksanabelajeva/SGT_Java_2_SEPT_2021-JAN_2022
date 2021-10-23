@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SGT_Java_2_SEPT_2021-JAN_2022.iml" filepath="$PROJECT_DIR$/SGT_Java_2_SEPT_2021-JAN_2022.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../portfolio/portfolio.iml" filepath="$PROJECT_DIR$/../portfolio/portfolio.iml" />
     </modules>
   </component>
 </project>
