@@ -1,5 +1,6 @@
 package lv.oxana.rocketshop.ecommerce.controller;
 
+import lv.oxana.rocketshop.ecommerce.repository.Product;
 import lv.oxana.rocketshop.ecommerce.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +14,8 @@ public class ProductController {
     @Autowired
     ProductServiceImpl productService;
 
-//    @GetMapping(value = { "", "/" })
-//    public Iterable<Product> getProducts() {
-//        return productService.getAllProducts();
-//    }
+    @GetMapping(value = { "", "/" })
+    public Iterable<Product> getProducts() {
+        return productService.getAllProducts();
+    }
 }
