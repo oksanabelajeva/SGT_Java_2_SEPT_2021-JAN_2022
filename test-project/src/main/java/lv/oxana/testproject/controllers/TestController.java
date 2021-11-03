@@ -1,5 +1,6 @@
 package lv.oxana.testproject.controllers;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  */
 @RestController
+@Service
 public class TestController {
 
     private final double PI = 3.14;

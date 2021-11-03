@@ -16,6 +16,12 @@ public class Product {
 
     private String pictureUrl;
 
+    public Product() {
+    }
+
+    public Product(Long id) {
+        this.id = id;
+    }
 
     public Product(Long id, String name, Double price, String pictureUrl) {
         this.id = id;

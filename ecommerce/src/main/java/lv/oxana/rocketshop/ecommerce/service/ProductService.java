@@ -2,10 +2,8 @@ package lv.oxana.rocketshop.ecommerce.service;
 
 import com.sun.istack.NotNull;
 import lv.oxana.rocketshop.ecommerce.repository.Product;
-import org.springframework.validation.annotation.Validated;
 
-import javax.validation.constrains.Min;
-import javax.validation.constrains.NotNull;
+import javax.validation.constraints.Min;
 
 public interface ProductService {
 
