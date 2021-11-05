@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ProductsComponent } from './ecommerce/products/products.component';
 import { OrdersComponent } from './ecommerce/orders/orders.component';
 import { ShoppingCartComponent } from './ecommerce/shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ShoppingCartComponent } from './ecommerce/shopping-cart/shopping-cart.c
     ShoppingCartComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
