@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EcommerceServiceService {
-    private productsUrl = "http://localhost:8080/api/products";
+    private productsUrl = "/api/products";
     private ordersUrl = "/api/orders";
 
     private productOrder: ProductOrder;
@@ -28,7 +28,7 @@ export class EcommerceServiceService {
     constructor(private http: HttpClient) {
     }
 
-    getAllProducts() {
+    getAllProducts(): any{
         return this.http.get(this.productsUrl);
     }
 
